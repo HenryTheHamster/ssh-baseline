@@ -118,6 +118,8 @@ class SshCrypto < Inspec.resource(1) # rubocop:disable Metrics/ClassLength
       when /10.10\./, /10.11\./, /10.12\./
         kex = kex66
       end
+    when 'amazon'
+      kex = kex66
     end
 
     kex
@@ -171,6 +173,8 @@ class SshCrypto < Inspec.resource(1) # rubocop:disable Metrics/ClassLength
       when /10.10\./, /10.11\./, /10.12\./
         macs = macs66
       end
+    when 'amazon'
+      macs = macs66
     end
 
     macs
